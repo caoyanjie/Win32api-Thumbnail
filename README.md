@@ -7,5 +7,5 @@
 ![screenshot](https://raw.githubusercontent.com/caoyanjie/Win32api-Thumbnail/master/Screenshots/qt.jpg)
 
 ## WinForm 版效果图：
-![screenshot](https://raw.githubusercontent.com/caoyanjie/Win32api-Thumbnail/master/Screenshots/winform1.jpg)
-![screenshot](https://raw.githubusercontent.com/caoyanjie/Win32api-Thumbnail/master/Screenshots/winform2.jpg)
+![screenshot](https://raw.githubusercontent.com/caoyanjie/Win32api-Thumbnail/master/Screenshots/winform_1.jpg)
+![screenshot](https://raw.githubusercontent.com/caoyanjie/Win32api-Thumbnail/master/Screenshots/winform_2.jpg)
