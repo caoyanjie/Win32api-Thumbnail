@@ -119,6 +119,7 @@ namespace Thumbnail_CSharp_
             comboBox1.Items.Clear();
             foreach (Window w in windows)
                 comboBox1.Items.Add(w);
+            comboBox1.SelectedIndex = 0;
         }
 
         // 回调
