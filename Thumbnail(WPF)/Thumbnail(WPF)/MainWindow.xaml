@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:Thumbnail_WPF_"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <WrapPanel x:Name="wrapPanel"/>
+    <ScrollViewer  Margin="40,81,40,88" ScrollChanged="ScrollViewer_ScrollChanged">
+        <WrapPanel x:Name="wrapPanel"/>
+    </ScrollViewer>
 </Window>

@@ -3,8 +3,13 @@
 
 #include <QWidget>
 #include <windows.h>
+#include <dwmapi.h>
+
+//#include <d3d11.h>
+//#include <dxgi1_2.h>
 
 class QPushButton;
+class QLabel;
 
 class Widget : public QWidget
 {
@@ -16,10 +21,25 @@ public:
 
 private:
     static BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam);
-    HRESULT drawThumbnail(HWND hwnd, LPCWCH winText, RECT desRect);
+    HRESULT drawThumbnailByHwnd(HWND destHwnd, HWND srcHwnd, RECT desRect);
+    HRESULT drawThumbnailByWintext(HWND hwnd, LPCWCH winText, RECT desRect);
 
-    QList<QWidget*> m_buttons;
-    static QStringList s_windowTitleList;
+    QList<QWidget*> 	m_buttons;
+    QList<QLabel*>		m_labels;
+    QList<HTHUMBNAIL>   m_thumbnails;
+    QWidget*			m_widget;
+
+    static QList<HWND>	s_hwnds;
+    static QStringList 	s_windowTitleList;
+
+    //ID3D11Device* d3d11Device = nullptr;
+    //IDXGIOutput* DxgiOutput;
+    //IDXGIOutputDuplication* m_DeskDupl = nullptr;
+
+    void updateThumbnail();
+
+private slots:
+    void timeout();
 };
 
 #endif // WIDGET_H
